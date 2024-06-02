@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Stock</title>
+</head>
+<body>
+    <h1>Delete Stock</h1>
+    <p>Are you sure you want to delete {{ stock.symbol }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, delete">
+    </form>
+    <a href="{% url 'stock_list' %}">Back to Stock List</a>
+</body>
+</html>

@@ -113,6 +113,10 @@
                     <td class="action-buttons">
                         <a href="{% url 'edit_stock' stock.id %}" class="edit-button">Edit</a>
                         <a href="{% url 'delete_stock' stock.id %}" class="delete-button">Delete</a>
+                <form action="{% url 'add_to_portfolio' stock.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Přidat do portfolia</button>
+</form>
                     </td>
                 </tr>
             {% endfor %}

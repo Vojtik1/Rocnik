@@ -11,48 +11,120 @@
             margin: 0;
             padding: 20px;
         }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
         h1 {
             text-align: center;
             color: #333;
         }
-        .detail-container {
-            width: 50%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .detail-label {
-            font-weight: bold;
-            color: #4CAF50;
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
         }
-        .detail-value {
-            margin-left: 10px;
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <h1>Stock Detail</h1>
-    <div class="detail-container">
-        <p><span class="detail-label">Symbol:</span> <span class="detail-value">{{ stock.symbol }}</span></p>
-        <p><span class="detail-label">Company Name:</span> <span class="detail-value">{{ stock.company_name }}</span></p>
-        <p><span class="detail-label">Exchange:</span> <span class="detail-value">{{ stock.exchange }}</span></p>
-        <p><span class="detail-label">Sector:</span> <span class="detail-value">{{ stock.sector }}</span></p>
-        <p><span class="detail-label">Industry:</span> <span class="detail-value">{{ stock.industry }}</span></p>
-        <p><span class="detail-label">Current Price:</span> <span class="detail-value">{{ stock.current_Price }}</span></p>
-        <p><span class="detail-label">Daily Change:</span> <span class="detail-value">{{ stock.daily_change }}</span></p>
-        <p><span class="detail-label">Volume:</span> <span class="detail-value">{{ stock.volume }}</span></p>
-        <p><span class="detail-label">52 Week High:</span> <span class="detail-value">{{ stock.high_price_52 }}</span></p>
-        <p><span class="detail-label">52 Week Low:</span> <span class="detail-value">{{ stock.low_price_52 }}</span></p>
-        <p><span class="detail-label">P/E Ratio:</span> <span class="detail-value">{{ stock.pe_ratio }}</span></p>
-        <p><span class="detail-label">Market Cap:</span> <span class="detail-value">{{ stock.market_cap }}</span></p>
-        <p><span class="detail-label">Dividend Yield:</span> <span class="detail-value">{{ stock.dividend_yield }}</span></p>
-        <p><span class="detail-label">Beta:</span> <span class="detail-value">{{ stock.beta }}</span></p>
-        <p><span class="detail-label">Earnings Yield:</span> <span class="detail-value">{{ stock.earnings_yield }}</span></p>
-        <p><span class="detail-label">Forward P/E Ratio:</span> <span class="detail-value">{{ stock.forward_pe }}</span></p>
-        <p><span class="detail-label">Price/Sales Ratio:</span> <span class="detail-value">{{ stock.price_sales_ratio }}</span></p>
-        <p><span class="detail-label">Price/Book Ratio:</span> <span class="detail-value">{{ stock.price_book_ratio }}</span></p>
-        <!-- Přidejte další informace podle potřeby -->
+    <div class="container">
+        <h1>{{ stock.company_name }}</h1>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>{{ stock.symbol }}</td>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>{{ stock.company_name }}</td>
+            </tr>
+            <tr>
+                <td>Exchange</td>
+                <td>{{ stock.exchange }}</td>
+            </tr>
+            <tr>
+                <td>Sector</td>
+                <td>{{ stock.sector }}</td>
+            </tr>
+            <tr>
+                <td>Industry</td>
+                <td>{{ stock.industry }}</td>
+            </tr>
+            <tr>
+                <td>Current Price</td>
+                <td>{{ current_price|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Daily Change</td>
+                <td>{{ daily_change|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td>{{ volume|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>52 Week High</td>
+                <td>{{ week_52_high|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>52 Week Low</td>
+                <td>{{ week_52_low|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>P/E Ratio</td>
+                <td>{{ pe_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Market Cap</td>
+                <td>{{ market_cap|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Dividend Yield</td>
+                <td>{{ dividend_yield|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td>{{ beta|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Earnings Yield</td>
+                <td>{{ earnings_yield|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Forward P/E Ratio</td>
+                <td>{{ forward_pe_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Price/Sales Ratio</td>
+                <td>{{ price_sales_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Price/Book Ratio</td>
+                <td>{{ price_book_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Long Business Summary</td>
+                <td>{{ long_business_summary }}</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

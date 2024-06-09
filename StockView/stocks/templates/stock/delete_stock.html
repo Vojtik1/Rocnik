@@ -2,14 +2,61 @@
 <html>
 <head>
     <title>Delete Stock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #009933;
+        }
+        p {
+            color: #333333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color: #009933;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #007a29;
+        }
+        a {
+            color: #009933;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Delete Stock</h1>
-    <p>Are you sure you want to delete {{ stock.symbol }}?</p>
-    <form method="post">
-        {% csrf_token %}
-        <input type="submit" value="Yes, delete">
-    </form>
-    <a href="{% url 'stock_list' %}">Back to Stock List</a>
+    <div class="container">
+        <h1>Delete Stock</h1>
+        <p>Are you sure you want to delete {{ stock.symbol }}?</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" value="Yes, delete">
+        </form>
+        <a href="{% url 'stock_list' %}">Back to Stock List</a>
+    </div>
 </body>
 </html>

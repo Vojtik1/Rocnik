@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 class Stock(models.Model):
@@ -6,6 +7,21 @@ class Stock(models.Model):
     exchange = models.CharField(max_length=50)
     sector = models.CharField(max_length=100)
     industry = models.CharField(max_length=100)
+    current_price = models.FloatField(null=True)
+    daily_change = models.FloatField(null=True)
+    volume = models.IntegerField(null=True)
+    week_52_high = models.FloatField(null=True)
+    week_52_low = models.FloatField(null=True)
+    pe_ratio = models.FloatField(null=True)
+    market_cap = models.BigIntegerField(null=True)
+    dividend_yield = models.FloatField(null=True)
+    beta = models.FloatField(null=True)
+    earnings_yield = models.FloatField(null=True)
+    forward_pe_ratio = models.FloatField(null=True)
+    price_sales_ratio = models.FloatField(null=True)
+    price_book_ratio = models.FloatField(null=True)
+    long_business_summary = models.TextField(null=True)
+
 
     def save(self, *args, **kwargs):
         self.symbol = self.symbol.upper()

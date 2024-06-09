@@ -1,0 +1,1 @@
+Portfolio manager zaťial

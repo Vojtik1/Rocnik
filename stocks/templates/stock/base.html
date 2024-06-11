@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base Template</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9; /* Světle zelená barva pozadí */
+            color: #2e7d32; /* Tmavě zelená barva textu */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #66bb6a; /* Středně zelená barva pro hlavičku */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        header img {
+            float: left;
+            margin-right: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        nav {
+            background-color: #4caf50; /* Hlavní zelená barva pro navigaci */
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #388e3c; /* Tmavší zelená pro hover efekt */
+            color: white;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #66bb6a; /* Středně zelená barva pro patičku */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'foto/logo.jpg' %}" alt="Logo" width="100">
+        <h1>Stock App</h1>
+    </header>
+    <nav>
+        <a href="{% url 'register' %}">Přihlášení</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+        <a href="{% url 'stock_list' %}">List akcií</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>©2024 Vojtik. All rights reserved</p>
+    </footer>
+</body>
+</html>

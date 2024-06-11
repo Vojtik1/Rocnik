@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ stock.company_name }}</h1>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>{{ stock.symbol }}</td>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>{{ stock.company_name }}</td>
+            </tr>
+            <tr>
+                <td>Exchange</td>
+                <td>{{ stock.exchange }}</td>
+            </tr>
+            <tr>
+                <td>Sector</td>
+                <td>{{ stock.sector }}</td>
+            </tr>
+            <tr>
+                <td>Industry</td>
+                <td>{{ stock.industry }}</td>
+            </tr>
+            <tr>
+                <td>Current Price</td>
+                <td>{{ current_price|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Daily Change</td>
+                <td>{{ daily_change|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td>{{ volume|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>52 Week High</td>
+                <td>{{ week_52_high|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>52 Week Low</td>
+                <td>{{ week_52_low|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>P/E Ratio</td>
+                <td>{{ pe_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Market Cap</td>
+                <td>{{ market_cap|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Dividend Yield</td>
+                <td>{{ dividend_yield|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td>{{ beta|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Earnings Yield</td>
+                <td>{{ earnings_yield|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Forward P/E Ratio</td>
+                <td>{{ forward_pe_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Price/Sales Ratio</td>
+                <td>{{ price_sales_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Price/Book Ratio</td>
+                <td>{{ price_book_ratio|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>Long Business Summary</td>
+                <td>{{ long_business_summary }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

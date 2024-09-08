@@ -1,1 +1,25 @@
-Portfolio manager zaťial
+ČASOVÝ HARMONOGRAM
+
+Září
+-
+-
+-
+-
+
+Říjen
+-
+-
+-
+-
+
+Listopad
+-
+-
+-
+-
+
+Prosinec
+-
+-
+-
+-

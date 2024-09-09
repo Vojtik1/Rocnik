@@ -1,5 +1,5 @@
 Cíl: 
-
+Umělá inteligence vytvořená umělou inteligencí :) 
 
 
 

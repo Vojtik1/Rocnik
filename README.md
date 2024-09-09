@@ -1,3 +1,21 @@
+Cíl: 
+
+
+
+
+Technologie:
+
+
+
+
+
+Konkurence, inspirace:
+
+
+
+
+
+
 ČASOVÝ HARMONOGRAM
 
 Září

@@ -30,38 +30,54 @@ Cíl:
 
 
 Technologie:
--Django
--Python 
--yfinance
--PyTorch
--randál dalších 
+Django
+Python 
+yfinance
+PyTorch
+randál dalších 
 
 Konkurence, inspirace:
--Simfin
--Danelfin
+Simfin
+Danelfin
 
 ČASOVÝ HARMONOGRAM
 
-Září
--
--
--
--
+Září:
+Získání a implementace všech potřebných historických dat do backendu
+Návrh struktury databáze pro uchování dat
+Implementace základních funkcí pro správu a načítání dat
+Testování správnosti a kompletnosti získaných dat
+Říjen:
+Výběr akcií do portfolia na základě zvolených ukazatelů (např. ROIC, P/E ratio)
+Vývoj algoritmu pro zpětné testování vybraných akcií
+Implementace funkcí pro zadávání uživatelských parametrů (časový horizont, typ strategie)
+Návrh rozhraní pro vizualizaci výsledků zpětného testování
+Listopad:
+Optimalizace algoritmu zpětného testování pro rychlejší a přesnější výpočty
+Testování aplikace s různými strategiemi a portfolii
+Implementace generování reportů s výsledky testů
+Průběžné ladění aplikace na základě testů a zpětné vazby
+Prosinec:
+Finalizace uživatelského rozhraní a přidání detailních grafů a přehledů
+Dokončení dokumentace aplikace včetně uživatelského manuálu
+Příprava finální prezentace projektu
+Závěrečné testování a opravy případných chyb
 
-Říjen
--
--
--
--
 
-Listopad
--
--
--
--
 
-Prosinec
--
--
--
--
+Instalace
+Klonování repozitáře
+git clone https://github.com/Vojtik1/Rocnik.git
+Přesun do adresáře webu
+python -m venv .venv
+Vytvoření virtuálního prostředí do složky .venv
+python -m venv .venv
+Aktivace virtuálního prostředí
+.venv\Scripts\activate
+Instalace závislostí
+pip install -r requirements.txt
+Spuštění aplikace
+python manage.py runserver
+Přístupové údaje do administrace
+superuživatel: admin
+heslo: admin

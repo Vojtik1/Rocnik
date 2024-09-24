@@ -14,6 +14,7 @@ kalendář událostí
 možnost stažení výsledků 
 Sdílení portfolia/strategie s ostatními uživateli
 Určit období backtestu
+Historie všech ukazatelů dané společnosti
 
 Co se tím naučím:
 Práce s vekým množstvím finančních dat a jejich analýzou
@@ -63,6 +64,9 @@ Dokončení dokumentace aplikace včetně uživatelského manuálu
 Příprava finální prezentace projektu
 Závěrečné testování a opravy případných chyb
 
+Myšlenky, co mě napadaj o půl noci: 
+V investicích jsou 2 strany, velcí hráči(instituce) a drobní investoři. Ten,kdo má lepší informovanost o společnostech není pochyb. 
+Když už hledám já informace ohledně nějaké společnosti do které bych potenciálně mohl investovat, musím projít několik stránek.Věřím, že mě i ostatním investorům by pomohlo, kdyby alespoň část jejich procesu hledání informací byla na jednom místě, o to se chci pokusit.
 
 
 Instalace

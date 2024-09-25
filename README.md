@@ -27,13 +27,12 @@ Alfint je aplikace pro zpětné testování akcií na základě uživatelsky def
 ## Technologie:
 - Django
 - Python 
-- yfinance
-- PyTorch
+- yfinance knihovna
+- simfin knihovna
 - randál dalších 
 
-### Konkurence, inspirace:
+### inspirace:
 - Simfin
-- Danelfin
 
 ### ČASOVÝ HARMONOGRAM
 
